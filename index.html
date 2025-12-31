@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Untitled Toast | App Studio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">Untitled Toast 🍞</div>
+        <div class="logo">Untitled Toast</div>
         <ul class="nav-links">
-            <li><a href="#work">Our Work</a></li>
-            <li><a href="#about">The Kitchen</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger">
+        <div class="hamburger" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -25,71 +25,80 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>Freshly Baked Apps.</h1>
-            <p>We craft crispy, golden-brown digital experiences that leave you wanting more.</p>
+            <h1>Intuitive Mobile Experiences.</h1>
+            <p>We build focused, user-friendly applications designed to simplify your digital life.</p>
             <div class="hero-buttons">
-                <a href="#work" class="btn primary">See the Menu</a>
-                <button id="toastBtn" class="btn secondary">Make a Toast</button>
+                <a href="#work" class="btn primary">View Our Apps</a>
+                <a href="#contact" class="btn secondary">Get in Touch</a>
             </div>
         </div>
         <div class="hero-visual">
-            <div class="toast-illustration">🍞</div>
+            <div class="square-stack"></div>
         </div>
     </header>
 
     <section id="work" class="section">
-        <h2 class="section-title">Current Batches</h2>
+        <h2 class="section-title">Selected Work</h2>
         <div class="project-grid">
+            
             <div class="card">
-                <div class="card-image" style="background-color: #FFD54F;"></div>
+                <div class="card-image" style="background-color: #3E2723; display:flex; align-items:center; justify-content:center;">
+                    <span style="color:white; font-size: 3rem;">R</span>
+                </div>
                 <div class="card-content">
-                    <h3>Butter Task Manager</h3>
-                    <p>Smooth task management for slippery schedules.</p>
-                    <a href="#">View Case Study &rarr;</a>
+                    <div class="card-header">
+                        <h3>Recapd</h3>
+                        <span class="badge">Coming Soon</span>
+                    </div>
+                    <p class="role">Collage Creator</p>
+                    <p>A seamless design tool for curating memories. Create stunning collages with intelligent layout suggestions.</p>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-image" style="background-color: #FF7043;"></div>
                 <div class="card-content">
                     <h3>Jam Session</h3>
-                    <p>A collaborative music player for sweet tunes.</p>
-                    <a href="#">View Case Study &rarr;</a>
+                    <p class="role">Music Collaboration</p>
+                    <p>Real-time playlist collaboration for teams and social groups. Sync your listening experience.</p>
+                    <a href="#" class="link-arrow">View Case Study &rarr;</a>
                 </div>
             </div>
+
             <div class="card">
-                <div class="card-image" style="background-color: #8D6E63;"></div>
+                <div class="card-image" style="background-color: #FFD54F;"></div>
                 <div class="card-content">
-                    <h3>Crusty Security</h3>
-                    <p>Hardened encryption to protect your soft data.</p>
-                    <a href="#">View Case Study &rarr;</a>
+                    <h3>Butter Task</h3>
+                    <p class="role">Productivity</p>
+                    <p>A minimal task manager designed to reduce cognitive load and improve daily focus.</p>
+                    <a href="#" class="link-arrow">View Case Study &rarr;</a>
                 </div>
             </div>
+
         </div>
     </section>
 
     <section id="about" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">The Kitchen</h2>
+        <div class="container-narrow">
+            <h2 class="section-title">About Studio</h2>
             <p class="about-text">
-                Untitled Toast is a creative app studio obsessed with simplicity. We believe software should be as comforting as breakfast on a Sunday morning. No bloat, just the good stuff.
+                Untitled Toast is a boutique app studio focused on utility and design. We believe that the best software stays out of the way, providing powerful tools wrapped in simple, elegant interfaces.
             </p>
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="footer-content">
-            <h3>Untitled Toast</h3>
-            <p>Made with flour, water, and code.</p>
-            <ul class="socials">
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">LinkedIn</a></li>
-            </ul>
+            <h3>Ready to collaborate?</h3>
+            <p>We are currently accepting new projects.</p>
+            <a href="mailto:hello@untitledtoast.com" class="btn primary">hello@untitledtoast.com</a>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Untitled Toast Studio.</p>
+            </div>
         </div>
     </footer>
 
-    <div id="toast-container"></div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html
