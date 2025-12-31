@@ -1,34 +1,20 @@
-// Select the button and container
-const toastBtn = document.getElementById('toastBtn');
-const toastContainer = document.getElementById('toast-container');
+// Simple Mobile Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-// Array of funny messages
-const messages = [
-    "Crunchy! 🍞",
-    "Perfectly toasted.",
-    "Butter side up!",
-    "Jam added.",
-    "Don't burn it!"
-];
-
-toastBtn.addEventListener('click', () => {
-    createToast();
+hamburger.addEventListener('click', () => {
+    // Toggle the display of nav links
+    if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+    } else {
+        navLinks.style.display = "flex";
+        navLinks.style.flexDirection = "column";
+        navLinks.style.position = "absolute";
+        navLinks.style.top = "70px";
+        navLinks.style.right = "0";
+        navLinks.style.background = "white";
+        navLinks.style.width = "100%";
+        navLinks.style.padding = "2rem";
+        navLinks.style.boxShadow = "0 5px 10px rgba(0,0,0,0.1)";
+    }
 });
-
-function createToast() {
-    // Create element
-    const toast = document.createElement('div');
-    toast.classList.add('toast');
-    
-    // Pick a random message
-    const randomMsg = messages[Math.floor(Math.random() * messages.length)];
-    toast.innerText = randomMsg;
-    
-    // Add to container
-    toastContainer.appendChild(toast);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-        toast.remove();
-    }, 3000);
-}
